@@ -1,9 +1,7 @@
 .segment "CODE"
 
 .include "../vectors/nmi_handler.inc"
-
-.proc reset_handler
-.endproc
+.include "../vectors/reset_handler.inc"
 
 .proc irq_handler
   RTI
