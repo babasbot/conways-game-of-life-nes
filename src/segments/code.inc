@@ -1,8 +1,6 @@
 .segment "CODE"
 
-.proc nmi_handler
-  RTI
-.endproc
+.include "../vectors/nmi_handler.inc"
 
 .proc reset_handler
 .endproc
