@@ -5,3 +5,4 @@
 .include "./segments/code.inc"
 .include "./segments/vectors.inc"
 .include "./segments/chr.inc"
+.include "./segments/rodata.inc"
