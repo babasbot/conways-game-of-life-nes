@@ -7,12 +7,11 @@
   LDX #$00
   STX PPU_ADDR
 
-write_palettes:
+.repeat $20
   LDA ppu_palettes, X
   STA PPU_DATA
   INX
-  CPX #$20
-  BNE write_palettes
+.endrepeat
 .endmacro
 
 .macro LOAD_PPU_ATTR_TABLE HB, LB
