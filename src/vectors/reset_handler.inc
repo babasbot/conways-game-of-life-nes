@@ -24,8 +24,12 @@
   STA PPU_ADDR
 
   LDX #%00000000
+  .repeat $20
+    STX PPU_DATA
+  .endrepeat
+
   ; 76 54 32 10
-  ; -- --  - --
+  ; -- --  - --   See: https://www.nesdev.org/wiki/PPU_attribute_tables
   ; || || || ||
   ; || || || ++-- top left palette
   ; || || ++----- top right palette
@@ -37,12 +41,6 @@
   ;   - %01 → palette 1
   ;   - %10 → palette 2
   ;   - %11 → palette 3
-  ;
-  ; See: https://www.nesdev.org/wiki/PPU_attribute_tables
-
-  .repeat $20
-    STX PPU_DATA
-  .endrepeat
 .endmacro
 
 .proc reset_handler
