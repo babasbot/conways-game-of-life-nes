@@ -6,3 +6,4 @@
 .byte $00000001                      ; Vertical mirroring
 .byte $0                             ; NROM
 .byte $0, $0, $0, $0, $0, $0, $0, $0 ; Unused padding
+
