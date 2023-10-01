@@ -1,31 +1,35 @@
+.include "constants.inc"
+
 .macro LOAD_PPU_PALETTES
-  LDX PPU_STAT
+  ldx PPU_STAT
 
-  LDX #$3f
-  STX PPU_ADDR
+  ldx #$3f
+  stx PPU_ADDR
 
-  LDX #$00
-  STX PPU_ADDR
+  ldx #$00
+  stx PPU_ADDR
 
-.repeat $20
-  LDA ppu_palettes, X
-  STA PPU_DATA
-  INX
-.endrepeat
+  .repeat $20
+    lda ppu_palettes, X
+    sta PPU_DATA
+
+    inx
+  .endrepeat
 .endmacro
 
 .macro LOAD_PPU_ATTR_TABLE HB, LB
-  LDA PPU_STAT
+  lda PPU_STAT
 
-  LDA HB
-  STA PPU_ADDR
+  lda HB
+  sta PPU_ADDR
 
-  LDA LB
-  STA PPU_ADDR
+  lda LB
+  sta PPU_ADDR
 
-  LDX #%00000000
+  ldx #%00000000
+
   .repeat $20
-    STX PPU_DATA
+    stx PPU_DATA
   .endrepeat
 
   ; 76 54 32 10
@@ -44,13 +48,13 @@
 .endmacro
 
 .proc reset_handler
-  SEI
-  CLD
+  sei
+  cld
 
-  LDX #$00
+  ldx #$00
 
-  STX PPU_CTRL
-  STX PPU_MASK
+  stx PPU_CTRL
+  stx PPU_MASK
 
   LOAD_PPU_PALETTES
 
@@ -74,8 +78,8 @@
   ; +--------- Generate an NMI at the start of the
   ;            vertical blanking interval (0: off; 1: on)
 
-  LDA #%10010000
-  STA PPU_CTRL
+  lda #%10010000
+  sta PPU_CTRL
 
   ; 7654 3210  PPU MASK
   ; ---- ----
@@ -90,12 +94,13 @@
   ; |+-------- Emphasize green
   ; +--------- Emphasize blue
 
-  LDA #%00011110
-  STA PPU_MASK
+  lda #%00011110
+  sta PPU_MASK
 
 await_vblank:
-  BIT PPU_STAT
-  BPL await_vblank
+  bit PPU_STAT
+  bpl await_vblank
 
-  JMP main
+  jmp main
 .endproc
+
