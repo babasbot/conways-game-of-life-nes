@@ -1,6 +1,2 @@
-*.o
-**/*.o
-
-*.nes
-*.dbg
-
+dist/**/*.nes
+obj/**/*.o
