@@ -47,6 +47,10 @@
   ;   - %11 → palette 3
 .endmacro
 
+.segment "RODATA"
+
+.import ppu_palettes
+
 .segment "CODE"
 
 .import main

@@ -10,3 +10,6 @@ ppu_palettes:
   .byte $0d, $30, $0d, $0d ; sprite palette 1
   .byte $0d, $30, $0d, $0d ; sprite palette 2
   .byte $0d, $30, $0d, $0d ; sprite palette 3
+
+.export ppu_palettes
+
