@@ -19,12 +19,26 @@ The game follows the standard rules of Conway's Game of Life:
 
 The game evolves step by step, and patterns emerge based on the initial configuration of live cells.
 
+## Self-Promotion
+
+Did you find this helpful? Share some love by:
+
+- Starring the repository on **GitHub** :star:️.
+- Following [**@babasbot**][babasbot-github] on **GitHub** :octocat:.
+- Following [**@babasbot**][babasbot-twitter] on **Twitter** :bird:.
+- [**Sponsoring**][gh-sponsors] this project :moneybag:.
+
+[babasbot-github]: https://github.com/babasbot
+[babasbot-twitter]: https://twitter.com/babasbot
+[gh-sponsors]: https://github.com/sponsors/babasbot
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt), allowing you to use, modify, and distribute the code freely.
+This project is licensed under the MIT License. For more details, please refer to the [LICENSE](LICENSE.txt) file.
 
 ## Acknowledgments
 
-Thank you for your interest in this NES homebrew port of Conway's Game of Life. Have fun exploring the fascinating world of cellular automata on your NES console! For any questions or suggestions, feel free to open a [new discussion](https://github.com/babasbot/conways-game-of-life-nes/discussions/new/choose) thread in the repository.
+Thank you for your interest in this NES homebrew port of Conway's Game of Life.
 
-Happy gaming!
+Have fun exploring the fascinating world of cellular automata on your NES console!
+
