@@ -47,6 +47,10 @@
   ;   - %11 → palette 3
 .endmacro
 
+.segment "CODE"
+
+.import main
+
 .proc reset_handler
   sei
   cld
