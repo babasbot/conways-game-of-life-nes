@@ -112,3 +112,4 @@ await_vblank:
   jmp main
 .endproc
 
+.export reset_handler
