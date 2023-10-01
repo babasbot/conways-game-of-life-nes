@@ -10,7 +10,7 @@ GAME_TITLE := game-of-life
 SRC_FILES := $(wildcard $(SRC_DIR)/*.asm)
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.asm,$(OBJ_DIR)/%.o,$(SRC_FILES))
 
-.PHONY: all clean
+.PHONY: all clean run
 
 all: clean $(DIST_DIR)/$(GAME_TITLE).nes
 
@@ -22,3 +22,6 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.asm
 
 clean:
 	rm -fr obj/** dist/**
+
+run: all
+	fceux $(DIST_DIR)/$(GAME_TITLE).nes
