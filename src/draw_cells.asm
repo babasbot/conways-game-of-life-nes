@@ -17,7 +17,6 @@
 
 .import nametable_hb
 .import nametable_lb
-.import cells_vector_0
 .import current_cell_vector
 .import current_cell_bit
 
