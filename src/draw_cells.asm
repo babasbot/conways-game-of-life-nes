@@ -17,7 +17,7 @@
 
 .import nametable_hb
 .import nametable_lb
-.import current_cell_vector
+.import current_vector
 .import current_cell_bit
 
 .segment "CODE"
@@ -100,7 +100,7 @@ inc_lb:
 
 loop:
   clc
-  asl current_cell_vector
+  asl current_vector
   bcc dead_cell_branch
 
   jsr draw_live_cell_tile
@@ -122,7 +122,7 @@ next_bit:
 
 .proc draw_cells
   lda #%11111111
-  sta current_cell_vector
+  sta current_vector
   jsr draw_cells_vector
 
   rts

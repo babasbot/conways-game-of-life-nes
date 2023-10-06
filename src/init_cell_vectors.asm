@@ -2,7 +2,7 @@
 
 .include "includes/import_all_vectors.inc"
 
-.import current_cell_vector
+.import current_vector
 .import nametable_lb
 .import nametable_hb
 
@@ -14,7 +14,7 @@
   sta nametable_hb
 
   lda %00000000
-  sta current_cell_vector
+  sta current_vector
 
   ; TODO: set to %00000000
   lda %10101010
