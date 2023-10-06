@@ -3,8 +3,8 @@
 nametable_hb:        .res 1
 nametable_lb:        .res 1
 
-current_vector:   .res 1
-current_cell_bit: .res 1
+current_vector:     .res 1
+current_vector_bit: .res 1
 
 vector_00: .res 1
 vector_01: .res 1
@@ -122,7 +122,7 @@ vector_6f: .res 1
 .export nametable_hb
 .export nametable_lb
 .export current_vector
-.export current_cell_bit
+.export current_vector_bit
 
 .export vector_00
 .export vector_01

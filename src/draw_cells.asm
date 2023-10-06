@@ -18,7 +18,7 @@
 .import nametable_hb
 .import nametable_lb
 .import current_vector
-.import current_cell_bit
+.import current_vector_bit
 
 .segment "CODE"
 
@@ -96,7 +96,7 @@ inc_lb:
 
 .proc draw_cells_vector
   lda #$00
-  sta current_cell_bit
+  sta current_vector_bit
 
 loop:
   clc
@@ -111,9 +111,9 @@ dead_cell_branch:
 
 next_bit:
   jsr increment_nametable_addr
-  inc current_cell_bit
+  inc current_vector_bit
 
-  lda current_cell_bit
+  lda current_vector_bit
   cmp #$08
   bcc loop
 
