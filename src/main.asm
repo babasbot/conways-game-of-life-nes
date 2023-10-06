@@ -1,3 +1,5 @@
+.include "constants.inc"
+
 .segment "CODE"
 
 .proc main
