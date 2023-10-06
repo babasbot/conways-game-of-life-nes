@@ -4,6 +4,119 @@
 .import nametable_lb
 .import nametable_hb
 
+.import vector_00
+.import vector_01
+.import vector_02
+.import vector_03
+.import vector_04
+.import vector_05
+.import vector_06
+.import vector_07
+.import vector_08
+.import vector_09
+.import vector_0a
+.import vector_0b
+.import vector_0c
+.import vector_0d
+.import vector_0e
+.import vector_0f
+.import vector_10
+.import vector_11
+.import vector_12
+.import vector_13
+.import vector_14
+.import vector_15
+.import vector_16
+.import vector_17
+.import vector_18
+.import vector_19
+.import vector_1a
+.import vector_1b
+.import vector_1c
+.import vector_1d
+.import vector_1e
+.import vector_1f
+.import vector_20
+.import vector_21
+.import vector_22
+.import vector_23
+.import vector_24
+.import vector_25
+.import vector_26
+.import vector_27
+.import vector_28
+.import vector_29
+.import vector_2a
+.import vector_2b
+.import vector_2c
+.import vector_2d
+.import vector_2e
+.import vector_2f
+.import vector_30
+.import vector_31
+.import vector_32
+.import vector_33
+.import vector_34
+.import vector_35
+.import vector_36
+.import vector_37
+.import vector_38
+.import vector_39
+.import vector_3a
+.import vector_3b
+.import vector_3c
+.import vector_3d
+.import vector_3e
+.import vector_3f
+.import vector_40
+.import vector_41
+.import vector_42
+.import vector_43
+.import vector_44
+.import vector_45
+.import vector_46
+.import vector_47
+.import vector_48
+.import vector_49
+.import vector_4a
+.import vector_4b
+.import vector_4c
+.import vector_4d
+.import vector_4e
+.import vector_4f
+.import vector_50
+.import vector_51
+.import vector_52
+.import vector_53
+.import vector_54
+.import vector_55
+.import vector_56
+.import vector_57
+.import vector_58
+.import vector_59
+.import vector_5a
+.import vector_5b
+.import vector_5c
+.import vector_5d
+.import vector_5e
+.import vector_5f
+.import vector_60
+.import vector_61
+.import vector_62
+.import vector_63
+.import vector_64
+.import vector_65
+.import vector_66
+.import vector_67
+.import vector_68
+.import vector_69
+.import vector_6a
+.import vector_6b
+.import vector_6c
+.import vector_6d
+.import vector_6e
+.import vector_6f
+
 .segment "CODE"
 
 .proc init_cells_vectors
@@ -13,6 +126,122 @@
 
   lda %00000000
   sta current_cell_vector
+
+  ; TODO: set to %00000000
+  lda %10101010
+
+  sta vector_00
+  sta vector_01
+  sta vector_02
+  sta vector_03
+  sta vector_04
+  sta vector_05
+  sta vector_06
+  sta vector_07
+  sta vector_08
+  sta vector_09
+  sta vector_0a
+  sta vector_0b
+  sta vector_0c
+  sta vector_0d
+  sta vector_0e
+  sta vector_0f
+  sta vector_10
+  sta vector_11
+  sta vector_12
+  sta vector_13
+  sta vector_14
+  sta vector_15
+  sta vector_16
+  sta vector_17
+  sta vector_18
+  sta vector_19
+  sta vector_1a
+  sta vector_1b
+  sta vector_1c
+  sta vector_1d
+  sta vector_1e
+  sta vector_1f
+  sta vector_20
+  sta vector_21
+  sta vector_22
+  sta vector_23
+  sta vector_24
+  sta vector_25
+  sta vector_26
+  sta vector_27
+  sta vector_28
+  sta vector_29
+  sta vector_2a
+  sta vector_2b
+  sta vector_2c
+  sta vector_2d
+  sta vector_2e
+  sta vector_2f
+  sta vector_30
+  sta vector_31
+  sta vector_32
+  sta vector_33
+  sta vector_34
+  sta vector_35
+  sta vector_36
+  sta vector_37
+  sta vector_38
+  sta vector_39
+  sta vector_3a
+  sta vector_3b
+  sta vector_3c
+  sta vector_3d
+  sta vector_3e
+  sta vector_3f
+  sta vector_40
+  sta vector_41
+  sta vector_42
+  sta vector_43
+  sta vector_44
+  sta vector_45
+  sta vector_46
+  sta vector_47
+  sta vector_48
+  sta vector_49
+  sta vector_4a
+  sta vector_4b
+  sta vector_4c
+  sta vector_4d
+  sta vector_4e
+  sta vector_4f
+  sta vector_50
+  sta vector_51
+  sta vector_52
+  sta vector_53
+  sta vector_54
+  sta vector_55
+  sta vector_56
+  sta vector_57
+  sta vector_58
+  sta vector_59
+  sta vector_5a
+  sta vector_5b
+  sta vector_5c
+  sta vector_5d
+  sta vector_5e
+  sta vector_5f
+  sta vector_60
+  sta vector_61
+  sta vector_62
+  sta vector_63
+  sta vector_64
+  sta vector_65
+  sta vector_66
+  sta vector_67
+  sta vector_68
+  sta vector_69
+  sta vector_6a
+  sta vector_6b
+  sta vector_6c
+  sta vector_6d
+  sta vector_6e
+  sta vector_6f
 
   rts
 .endproc
