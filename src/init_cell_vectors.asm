@@ -3,6 +3,8 @@
 .include "includes/import_all_vectors.inc"
 
 .import current_vector
+.import current_vector_addr_offset
+
 .import nametable_lb
 .import nametable_hb
 
@@ -13,11 +15,11 @@
   sta nametable_lb
   sta nametable_hb
 
-  lda %00000000
+  lda #%00000000
   sta current_vector
+  sta current_vector_addr_offset
 
-  ; TODO: set to %00000000
-  lda %10101010
+  lda #%00000000
 
   sta vector_00
   sta vector_01
@@ -35,6 +37,7 @@
   sta vector_0d
   sta vector_0e
   sta vector_0f
+
   sta vector_10
   sta vector_11
   sta vector_12
@@ -51,6 +54,7 @@
   sta vector_1d
   sta vector_1e
   sta vector_1f
+
   sta vector_20
   sta vector_21
   sta vector_22
@@ -67,6 +71,7 @@
   sta vector_2d
   sta vector_2e
   sta vector_2f
+
   sta vector_30
   sta vector_31
   sta vector_32
@@ -83,6 +88,7 @@
   sta vector_3d
   sta vector_3e
   sta vector_3f
+
   sta vector_40
   sta vector_41
   sta vector_42
@@ -99,6 +105,7 @@
   sta vector_4d
   sta vector_4e
   sta vector_4f
+
   sta vector_50
   sta vector_51
   sta vector_52
@@ -115,6 +122,7 @@
   sta vector_5d
   sta vector_5e
   sta vector_5f
+
   sta vector_60
   sta vector_61
   sta vector_62

@@ -19,6 +19,8 @@
 .import nametable_lb
 .import current_vector
 .import current_vector_bit
+.import current_vector_addr_offset
+.import vector_00
 
 .segment "CODE"
 
@@ -121,10 +123,19 @@ next_bit:
 .endproc
 
 .proc draw_cells
-  lda #%11111111
+  lda current_vector_addr_offset
+  cmp #$70
+  beq @done
+
+  tax
+  lda vector_00,X
   sta current_vector
+
   jsr draw_cells_vector
 
+  inc current_vector_addr_offset
+
+@done:
   rts
 .endproc
 
