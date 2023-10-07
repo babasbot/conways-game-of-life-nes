@@ -1,7 +1,7 @@
 .segment "ZEROPAGE"
 
-nametable_hb:        .res 1
-nametable_lb:        .res 1
+nametable_hb: .res 1
+nametable_lb: .res 1
 
 current_vector:             .res 1
 current_vector_bit:         .res 1
@@ -23,6 +23,7 @@ vector_0c: .res 1
 vector_0d: .res 1
 vector_0e: .res 1
 vector_0f: .res 1
+
 vector_10: .res 1
 vector_11: .res 1
 vector_12: .res 1
@@ -39,6 +40,7 @@ vector_1c: .res 1
 vector_1d: .res 1
 vector_1e: .res 1
 vector_1f: .res 1
+
 vector_20: .res 1
 vector_21: .res 1
 vector_22: .res 1
@@ -55,6 +57,7 @@ vector_2c: .res 1
 vector_2d: .res 1
 vector_2e: .res 1
 vector_2f: .res 1
+
 vector_30: .res 1
 vector_31: .res 1
 vector_32: .res 1
@@ -71,6 +74,7 @@ vector_3c: .res 1
 vector_3d: .res 1
 vector_3e: .res 1
 vector_3f: .res 1
+
 vector_40: .res 1
 vector_41: .res 1
 vector_42: .res 1
@@ -87,6 +91,7 @@ vector_4c: .res 1
 vector_4d: .res 1
 vector_4e: .res 1
 vector_4f: .res 1
+
 vector_50: .res 1
 vector_51: .res 1
 vector_52: .res 1
@@ -103,6 +108,7 @@ vector_5c: .res 1
 vector_5d: .res 1
 vector_5e: .res 1
 vector_5f: .res 1
+
 vector_60: .res 1
 vector_61: .res 1
 vector_62: .res 1
@@ -143,6 +149,7 @@ vector_6f: .res 1
 .export vector_0d
 .export vector_0e
 .export vector_0f
+
 .export vector_10
 .export vector_11
 .export vector_12
@@ -159,6 +166,7 @@ vector_6f: .res 1
 .export vector_1d
 .export vector_1e
 .export vector_1f
+
 .export vector_20
 .export vector_21
 .export vector_22
@@ -175,6 +183,7 @@ vector_6f: .res 1
 .export vector_2d
 .export vector_2e
 .export vector_2f
+
 .export vector_30
 .export vector_31
 .export vector_32
@@ -191,6 +200,7 @@ vector_6f: .res 1
 .export vector_3d
 .export vector_3e
 .export vector_3f
+
 .export vector_40
 .export vector_41
 .export vector_42
@@ -207,6 +217,7 @@ vector_6f: .res 1
 .export vector_4d
 .export vector_4e
 .export vector_4f
+
 .export vector_50
 .export vector_51
 .export vector_52
@@ -223,6 +234,7 @@ vector_6f: .res 1
 .export vector_5d
 .export vector_5e
 .export vector_5f
+
 .export vector_60
 .export vector_61
 .export vector_62
