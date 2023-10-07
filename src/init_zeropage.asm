@@ -10,7 +10,7 @@
 
 .segment "CODE"
 
-.proc init_cells_vectors
+.proc init_zeropage
   lda #$20
   sta nametable_lb
   sta nametable_hb
@@ -122,7 +122,6 @@
   sta vector_5d
   sta vector_5e
   sta vector_5f
-
   sta vector_60
   sta vector_61
   sta vector_62
@@ -143,4 +142,4 @@
   rts
 .endproc
 
-.export init_cells_vectors
+.export init_zeropage

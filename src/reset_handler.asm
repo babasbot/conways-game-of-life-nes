@@ -54,7 +54,7 @@
 .segment "CODE"
 
 .import main
-.import init_cells_vectors
+.import init_zeropage
 
 .proc reset_handler
   sei
@@ -106,7 +106,7 @@
   lda #%00011110
   sta PPU_MASK
 
-  jsr init_cells_vectors
+  jsr init_zeropage
 
 await_vblank:
   bit PPU_STAT
