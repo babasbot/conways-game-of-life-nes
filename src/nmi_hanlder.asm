@@ -1,5 +1,9 @@
 .include "constants.inc"
 
+.segment "ZEROPAGE"
+
+.import state
+
 .segment "CODE"
 
 .import draw_cells
@@ -14,7 +18,14 @@
 .proc nmi_handler
   OAM_DMA_TRANSFER
 
+  lda state
+  cmp DRAWING_CELLS_STATE
+  bne calculate_neighborhoods
+
   jsr draw_cells
+
+calculate_neighborhoods:
+  nop
 
   lda #$00
   sta PPU_SCROLL

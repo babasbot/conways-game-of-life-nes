@@ -1,12 +1,15 @@
 .segment "ZEROPAGE"
 
 .include "includes/import_all_vectors.inc"
+.include "constants.inc"
 
 .import current_vector
 .import current_vector_addr_offset
 
 .import nametable_lb
 .import nametable_hb
+
+.import state
 
 .segment "CODE"
 
@@ -19,7 +22,10 @@
   sta current_vector
   sta current_vector_addr_offset
 
-  lda #%00000000
+  lda #DRAWING_CELLS_STATE
+  sta state
+
+  lda #%11111111
 
   sta vector_00
   sta vector_01

@@ -1,5 +1,7 @@
 .segment "ZEROPAGE"
 
+state: .res 1
+
 nametable_hb: .res 1
 nametable_lb: .res 1
 
@@ -125,6 +127,8 @@ vector_6c: .res 1
 vector_6d: .res 1
 vector_6e: .res 1
 vector_6f: .res 1
+
+.export state
 
 .export nametable_hb
 .export nametable_lb

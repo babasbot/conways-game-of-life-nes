@@ -15,6 +15,7 @@
 
 .segment "ZEROPAGE"
 
+.import state
 .import nametable_hb
 .import nametable_lb
 .import current_vector
@@ -134,6 +135,13 @@ next_bit:
   jsr draw_cells_vector
 
   inc current_vector_addr_offset
+
+  lda current_vector_addr_offset
+  cmp #$70
+  bne @done
+
+  lda #CALCULATING_NEIGHBORHOODS
+  sta state
 
 @done:
   rts
