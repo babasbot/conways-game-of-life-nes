@@ -21,13 +21,11 @@
 
   lda state
   cmp DRAWING_CELLS_STATE
-  bne calculate_neighborhoods
+  bne done_drawing
 
   jsr draw_cells
 
-calculate_neighborhoods:
-  jsr compute_neighborhoods
-
+done_drawing:
   lda #$00
   sta PPU_SCROLL
   sta PPU_SCROLL
