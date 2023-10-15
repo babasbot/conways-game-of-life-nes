@@ -7,6 +7,7 @@
 .segment "CODE"
 
 .import draw_cells
+.import compute_neighborhoods
 
 .macro OAM_DMA_TRANSFER
   lda #$00
@@ -25,7 +26,7 @@
   jsr draw_cells
 
 calculate_neighborhoods:
-  nop
+  jsr compute_neighborhoods
 
   lda #$00
   sta PPU_SCROLL
