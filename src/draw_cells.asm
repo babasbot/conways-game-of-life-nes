@@ -125,7 +125,7 @@ next_bit:
 
 .proc draw_cells
   lda current_vector_addr_offset
-  cmp #$70
+  cmp #VECTOR_SIZE
   beq @done
 
   tax
@@ -137,7 +137,7 @@ next_bit:
   inc current_vector_addr_offset
 
   lda current_vector_addr_offset
-  cmp #$70
+  cmp #VECTOR_SIZE
   bne @done
 
   lda #CALCULATING_NEIGHBORHOODS
